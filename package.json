@@ -1,0 +1,26 @@
+{
+  "name": "doodlewithnodesocket",
+  "version": "1.0.0",
+  "description": "Part of my Live Stream to make a co-doodling app.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenscience/DoodleWithNodeSocket.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "SocketIO",
+    "ExpressJS",
+    "Doodle"
+  ],
+  "author": "Praveen Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praveenscience/DoodleWithNodeSocket/issues"
+  },
+  "homepage": "https://github.com/praveenscience/DoodleWithNodeSocket#readme"
+}
