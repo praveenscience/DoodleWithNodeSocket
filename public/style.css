@@ -4,3 +4,6 @@
   list-style: none;
   line-height: 1;
 }
+.whiteboard {
+  display: block;
+}
