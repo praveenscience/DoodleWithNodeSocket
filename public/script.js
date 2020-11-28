@@ -82,3 +82,15 @@ function onMouseMove(e) {
   current.x = e.clientX || e.touches[0].clientX;
   current.y = e.clientY || e.touches[0].clientY;
 }
+
+// Desktop Events
+canvas.addEventListener("mousedown", onMouseDown, false);
+canvas.addEventListener("mouseup", onMouseUp, false);
+canvas.addEventListener("mouseout", onMouseUp, false);
+canvas.addEventListener("mousemove", throttle(onMouseMove, 10), false);
+
+// Mobile Events
+canvas.addEventListener("touchstart", onMouseDown, false);
+canvas.addEventListener("touchend", onMouseUp, false);
+canvas.addEventListener("touchcancel", onMouseUp, false);
+canvas.addEventListener("touchmove", throttle(onMouseMove, 10), false);
