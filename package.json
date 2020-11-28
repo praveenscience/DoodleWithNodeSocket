@@ -4,7 +4,7 @@
   "description": "Part of my Live Stream to make a co-doodling app.",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/praveenscience/DoodleWithNodeSocket/issues"
   },
-  "homepage": "https://github.com/praveenscience/DoodleWithNodeSocket#readme"
+  "homepage": "https://github.com/praveenscience/DoodleWithNodeSocket#readme",
+  "dependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
