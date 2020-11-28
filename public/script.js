@@ -9,6 +9,18 @@ var current = {
   color: "black"
 };
 
+function throttle(callback, delay) {
+  var previousCall = new Date().getTime();
+  return function () {
+    var time = new Date().getTime();
+
+    if (time - previousCall >= delay) {
+      previousCall = time;
+      callback.apply(null, arguments);
+    }
+  };
+}
+
 function drawLine(x0, y0, x1, y1, color, emit) {
   context.beginPath();
   context.moveTo(x0, y0);
@@ -34,13 +46,13 @@ function drawLine(x0, y0, x1, y1, color, emit) {
   });
 }
 
-function mousedown(e) {
+function onMouseDown(e) {
   drawing = true;
   current.x = e.clientX || e.touches[0].clientX;
   current.y = e.clientY || e.touches[0].clientY;
 }
 
-function mouseup(e) {
+function onMouseUp(e) {
   if (!drawing) {
     return;
   }
@@ -55,7 +67,7 @@ function mouseup(e) {
   );
 }
 
-function mousemove(e) {
+function onMouseMove(e) {
   if (!drawing) {
     return;
   }
